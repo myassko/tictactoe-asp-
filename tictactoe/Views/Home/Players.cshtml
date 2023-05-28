@@ -1,0 +1,13 @@
+﻿@model IEnumerable<tictactoe.Models.User>
+@{
+    ViewData["Title"] = "Main Page";
+}
+<h2>Форма игрока</h2>
+<a asp-action="Create">Добавить пользователя</a>
+<table class="table">
+    <tr><td>Имя</td><td>Никнейм</td></tr>
+    @foreach (var item in Model)
+    {
+        <tr><td>@item.Name</td><td>@item.Nickname</td></tr>
+    }
+</table>
